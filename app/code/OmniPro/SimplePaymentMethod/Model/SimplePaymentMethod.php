@@ -9,7 +9,6 @@ class SimplePaymentMethod extends \Magento\Payment\Model\Method\Cc
     const NMI_APPROVED = 1;
     const NMI_DECLINED = 2;
     const NMI_ERROR = 3;
-    const NMI = 'https://secure.nmi.com/api/transact.php';
 
     protected $_code = 'simplepayment';
 
@@ -85,7 +84,7 @@ class SimplePaymentMethod extends \Magento\Payment\Model\Method\Cc
 
         $data = [
             'type' => 'auth',
-            'security_key' => '6457Thfj624V5r7WUwc5v6a68Zsd6YEm',
+            'security_key' => $this->getConfigData('security_key'),
             'ccnumber' => $payment->getCcNumber(),
             'ccexp' => sprintf('%02d', $payment->getCcExpMonth()).substr($payment->getCcExpYear(), 2, 2),
             'amount' => $amount,
@@ -100,7 +99,7 @@ class SimplePaymentMethod extends \Magento\Payment\Model\Method\Cc
                 $amp = '&';
             }
         }
-        $this->curl->get(self::NMI . '?' . $postRequestData);
+        $this->curl->get($this->getConfigData('nmi_gateway') . '?' . $postRequestData);
         $response = $this->curl->getBody();
         $response = explode("&",$response);
         for($i=0;$i<count($response);$i++) {
