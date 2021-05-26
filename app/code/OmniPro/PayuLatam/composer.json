@@ -1,0 +1,28 @@
+{
+  "name": "omnipro/payulatam",
+  "description": "payU latam integration for magento2",
+  "authors": [
+    {
+      "name": "Luz Fuentes",
+      "email": "luz.fuentes@omni.pro",
+      "role": "Developer"
+    }
+  ],
+  "require": {
+    "php": "~5.5.0|~5.6.0|~7.0.0|~7.1.0|~7.2.0|~7.3.0|~7.4.0"
+  },
+  "type": "magento2-module",
+  "version": "1.0.7",
+  "license": [
+    "MIT"
+  ],
+  "autoload": {
+    "files": [
+      "registration.php"
+    ],
+    "psr-4": {
+      "OmniPro\\PayuLatam\\": ""
+    }
+  }
+}
+

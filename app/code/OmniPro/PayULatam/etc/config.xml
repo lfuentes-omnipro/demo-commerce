@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
+    <default>
+        <payment>
+            <payulatam>
+                <active>1</active>
+                <title>Metodo PayULatam </title>
+                <environment>0</environment>
+                <order_status>pending_payment</order_status>
+                <model>OmniPro\PayULatam\Model\PayULatam</model>
+                <payment_action>authorize</payment_action>
+                <cctypes>VI,MC</cctypes>
+                <allowspecific>1</allowspecific>
+                <group>offline</group>
+            </payulatam>
+        </payment>
+    </default>
+</config>
