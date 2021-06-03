@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="1column" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <head>
+        <css src="OmniPro_LuzBelkis::css/style.css" rel="stylesheet" type="text/css" />
+         <script src="OmniPro_LuzBelkis::js/menu.js"></script>
+        <!-- Google Fonts -->
+     <link rel="stylesheet" type="text/css" src="https://fonts.googleapis.com/css2?family=Dosis:wght@300;700" src_type="url" /> 
+    </head>
+    <body>
+        <referenceContainer name="header.container" remove="true"/>
+        <referenceBlock name="catalog.topnav" remove="true"/>
+        <referenceContainer name="footer-container" remove="true"/>
+        <referenceBlock name="copyright" remove="true"/>
+        <referenceContainer name="content">
+            <block class="Magento\Framework\View\Element\Template" name="OmniPro_LuzBelkis_Index" template="OmniPro_LuzBelkis::index.phtml"/>
+        </referenceContainer>
+    </body>
+</page>

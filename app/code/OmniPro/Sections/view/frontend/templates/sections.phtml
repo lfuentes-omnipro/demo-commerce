@@ -1,0 +1,22 @@
+<?php
+/** @var \Magento\Framework\View\Element\Template $block */
+?>
+
+<div id="omnisections" data-bind="scope: 'Sections'">
+    <!-- ko template: getTemplate() --><!-- /ko  -->
+</div>
+
+<script type="text/x-magento-init">
+{
+    "#omnisections": {
+        "Magento_Ui/js/core/app": {
+            "components": {
+                "Sections": {
+                    "component": "omnisections",
+                    "template": "OmniPro_Sections/sections"
+                }
+            }
+        }
+    }
+}
+</script>

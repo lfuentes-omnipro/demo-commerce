@@ -1,0 +1,50 @@
+<h3 class="new-post-blog">New blog post</h3>
+<form class="form contenedor-blog" action="" method="post" data-bind="submit: sendBlog" data-hasrequired="* Required Fields'">
+    <fieldset class="fieldset">
+        <div class="field name required">
+            <label for="titulo" class="label"><span>Titulo</span></label>
+            <div class="control">
+                <input type="text" id="titulo" name="titulo" placeholder="Titulo" class="input-text" data-bind="value: titulo" data-validate='{"required":true}'>
+            </div>
+        </div>
+        <div class="field name required">
+            <label for="contenido" class="label"><span>Contenido</span></label>
+            <div class="control">
+                <input type="textarea" id="contenido" name="contenido" placeholder="Contenido" class="input-text" data-bind="value: contenido" data-validate='{"required":true}'>
+            </div>
+        </div>
+        <div class="field name required">
+            <label for="email" class="label"><span>Email</span></label>
+            <div class="control">
+                <input type="text" id="email" name="email" placeholder="Email" class="input-text" data-bind="value: email" data-validate='{"required":true}'>
+            </div>
+        </div>
+        <div class="field name">
+            <label for="img" class="label"><span>Imagen</span></label>
+            <div class="control">
+                <input type="file" id="img" name="img" data-bind="value: image, event: { change: changeImage }" accept="image/png, image/jpeg" class="input-text">
+            </div>
+        </div>
+    </fieldset>
+    <div class="actions-toolbar">
+        <div class="primary">
+                <button type="submit" title="Submit" class="action submit primary btn-save-blog">
+                    <span>Submit</span>
+                </button>
+        </div>
+    </div>
+</form>
+<div class="blogs">
+    <!-- <div class="blog" data-bind="foreach: blogs">
+        <h3 class="blog-title" data-bind="text: title"></h3>
+        <div class="blog-image"></div>
+        <p class="blog-content" data-bind="text: content"></p>
+    </div> -->
+    <div class="card" style="width: 18rem;" data-bind="foreach: blogs">
+        <img src="#" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title" data-bind="text: title"></h5>
+          <p class="card-text" data-bind="text: content"></p>
+        </div>
+      </div>
+</div>

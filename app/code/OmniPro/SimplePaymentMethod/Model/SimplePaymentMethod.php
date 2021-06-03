@@ -63,6 +63,9 @@ class SimplePaymentMethod extends \Magento\Payment\Model\Method\Cc
 
     public function authorize(InfoInterface $payment, $amount)
     {
+        $this->logger->debug([
+            'hola'=>'hola'
+        ]);
         $result = $this->authorizeRequest($payment, $amount);
         switch ($result['response']) {
             case self::NMI_APPROVED:
@@ -81,6 +84,7 @@ class SimplePaymentMethod extends \Magento\Payment\Model\Method\Cc
 
     protected function authorizeRequest($payment, $amount) {
         $order = $payment->getOrder();
+        $billingAddress = $order->getBillingAddress();
 
         $data = [
             'type' => 'auth',
@@ -88,7 +92,8 @@ class SimplePaymentMethod extends \Magento\Payment\Model\Method\Cc
             'ccnumber' => $payment->getCcNumber(),
             'ccexp' => sprintf('%02d', $payment->getCcExpMonth()).substr($payment->getCcExpYear(), 2, 2),
             'amount' => $amount,
-            'orderid' => $order->getIncrementId()
+            'orderid' => $order->getIncrementId(),
+            'direccion'=>$billingAddress->getStreetline1()
         ];
         
         $amp = '';

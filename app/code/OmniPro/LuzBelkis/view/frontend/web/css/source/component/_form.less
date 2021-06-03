@@ -1,0 +1,79 @@
+& when (@media-common = true) {  
+    //switch
+    .form-switch {
+        padding-left: 2.5em;
+    
+        .onoffswitch {
+            position: relative; width: 34px;
+            -webkit-user-select:none; -moz-user-select:none; -ms-user-select: none;
+            display: inline-block;
+        }
+        .onoffswitch-checkbox {
+            position: absolute;
+            opacity: 0;
+            pointer-events: none;
+        }
+        .onoffswitch-label {
+            display: block; overflow: hidden; cursor: pointer;
+            height: 14px; padding: 0; line-height: 14px;
+            border: 0px solid @color-white; border-radius: 20px;
+            background-color: @color-Dark-grayish-blue;
+        }
+        .onoffswitch-label:before {
+            content: "";
+            display: block; width: 20px; margin: -3px;
+            background: @color-white;
+            position: absolute; top: 0; bottom: 0;
+            right: 16px;
+            border-radius: 20px;
+            box-shadow: 0 6px 12px 0px @color-Dark-gray
+        }
+        .onoffswitch-checkbox:checked + .onoffswitch-label {
+            background-color: @color-ico-background;
+        }
+        .onoffswitch-checkbox:checked + .onoffswitch-label, .onoffswitch-checkbox:checked + .onoffswitch-label:before {
+           border-color: @color-ico-background;
+        }
+        .onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-inner {
+            margin-left: 0;
+        }
+        .onoffswitch-checkbox:checked + .onoffswitch-label:before {
+            right: 0px; 
+            background-color: @color-Vivi-blue; 
+            box-shadow: 3px 6px 18px 0px rgba(0, 0, 0, 0.2);
+        }
+     
+    }
+}
+.auth__login-register {
+    form{
+        input.input-custom {
+            background: none;
+            border: 0;
+            border-bottom: 1px solid c;
+            border-radius: 0;
+            padding: 12px 0;
+        } 
+        .form-label {
+            font-family: "Dosis";
+            font-style: normal;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 18px;
+            color: @color-White-Smoke;
+            text-transform: uppercase;
+            margin-bottom: .5rem;
+        }
+        input {
+            font-family: "Dosis";
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 20px;
+            color: @color-Light-gray
+        }
+        .chk-newsletter {
+            margin: .25em 10px auto auto;
+        }
+    }
+}

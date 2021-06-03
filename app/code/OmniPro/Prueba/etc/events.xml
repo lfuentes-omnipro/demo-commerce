@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Event/etc/events.xsd">
+    <event name="page_block_html_topmenu_gethtml_before">
+        <observer name="OmniPro_Prueba_Observer_Before" instance="OmniPro\Prueba\Observer\TopMenuObserverBefore" />
+    </event>
+    <event name="page_block_html_topmenu_gethtml_after">
+        <observer name="OmniPro_Prueba_Observer_After" instance="OmniPro\Prueba\Observer\TopMenuObserverAfter" />
+    </event>
+</config>

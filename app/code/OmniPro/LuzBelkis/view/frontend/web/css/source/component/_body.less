@@ -1,0 +1,235 @@
+
+.bg-auth, .login-index-index{
+    background-image: url('../images/bg-auth.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: @background-color-Cerulean-Blue;
+}
+.auth__menu-ico::before{
+    content: url('../images/menu-auth.svg');
+}
+.logo-auth, .logo-auth-menu {
+    text-align: center;
+    padding: 10px;
+    margin: 0 auto 50px;
+}
+.justify-content-end {
+    justify-content: flex-end!important;
+}
+.sticky-top{
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none;
+    padding-top: 10px;
+}
+.mb-5 {
+    margin-bottom: 3rem!important;
+}
+.mb-3 {
+    margin-bottom: 1rem!important;
+}
+.mb-4 {
+    margin-bottom: 1.5rem!important;
+}
+.mt-4 {
+    margin-top: 1.5rem!important;
+}
+.d-grid {
+    display: grid!important;
+}
+.mx-auto {
+    margin-right: auto!important;
+    margin-left: auto!important;
+}
+.gap-2 {
+    gap: .5rem!important;
+}
+.form-control {
+    display: block;
+    width: 100%;
+}
+label {
+    display: inline-block;
+}
+.nav {
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none;
+}
+.text-center {
+    text-align: center!important;
+}
+.form-check {
+    display: block;
+    min-height: 1.5rem;
+    padding-left: 1.5em;
+    margin-bottom: .125rem;
+}
+.tab-content>.tab-pane {
+    display: none;
+}
+.auth__login-register {
+    width: 327px;
+    margin: 0 auto;
+    -webkit-box-shadow: 1px 2px 19px -6px rgba(0,0,0,0.9); 
+    box-shadow: 1px 2px 19px -6px rgba(0,0,0,0.9);
+
+    .nav-tabs {
+        border-bottom: none;
+
+        .nav-item {
+            width: 50%;
+            position: relative;
+            margin-bottom: 0;
+            a.active{
+                background:  @background-color-Cerulean-Blue;
+            }
+        }
+
+        .nav-item.register a, .nav-item.login a {
+            border: none!important;
+            display: block;
+        }
+        .nav-item.login a.active:before, .nav-item.register a.active:after {
+            content: " ";
+            position: absolute;
+            top: 1px;
+            transition: all .25s ease;
+            border-top: 58px solid transparent;
+            border-bottom: 0 solid transparent;
+        }
+        .nav-item.login a.active {
+            margin-right: 5px;
+                &:before {
+                right: -15px;
+                border-left: 20px solid @color-Very-dark-desaturated-blue;
+            }
+        }
+        .nav-item.register a.active:after {
+            left: -15px;
+            border-right: 15px solid @color-Very-dark-desaturated-blue;
+        }
+        .nav-link {
+            font-family: "Dosis";
+            font-style: normal;
+            font-weight: 600;
+            font-size: 20px;
+            line-height: 25px;
+            text-align: center;
+            text-transform: uppercase;
+            color: @color-white;
+            padding: 17px 10px;
+            margin: 0;
+            border-top-left-radius: .25rem;
+            border-top-right-radius: .25rem;
+        }
+        .nav-item a {
+            background: @color-Very-dark-desaturated-blue;
+            mix-blend-mode: normal;
+        }
+    }
+    .tab-content {
+        background: @color-Very-dark-desaturated-blue;
+        mix-blend-mode: normal;
+        border-radius: 0 0 6px 6px;
+        padding: 23px 24px 27px;
+
+        >.active {
+            display: block;
+        }
+    }
+    label.newsletter {
+        font-family: "Dosis";
+        font-style: normal;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 22px;
+        color: @color-White-Smoke;
+    }
+    button {
+        background: @color-Very-light-gray;
+        border: 1px solid @color-Light-gray;
+        color: @color-Very-dark-gray;
+        cursor: pointer;
+        display: inline-block;
+        font-family: "Dosis";
+        font-weight: 600;
+        margin: 0;
+        padding: 7px 15px;
+        font-size: 1.4rem;
+        line-height: 1.6rem;
+        box-sizing: border-box;
+        vertical-align: middle;
+    }
+    .btn-auth {
+        background: linear-gradient( 90deg,#8de7ed 2.31%,#2fcec5);
+        border-radius: 24px;
+        font-family: "Dosis";
+        font-style: normal;
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 23px;
+        text-align: center;
+        color: @color-white ;
+    }
+    .recover-password {
+        font-family: "Dosis";
+        font-style: normal;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 22px;
+        text-align: center;
+        color: @color-white ;
+        text-decoration: none;
+    }
+}
+
+.sidenav-menu {
+     height: 100%;
+     position: fixed;
+     z-index: 1020;
+     top: 0;
+     left: 0;
+     overflow-x: hidden;
+     transition: .5s;
+     padding-top: 45px;
+     width: 0;
+     &.bg-menu {
+         background-repeat: no-repeat;
+         background-image: url('../images/bg-menu.png');
+         background-color: @background-color-Cerulean-Blue;
+         background-position: center 0;
+    }
+    &.active{
+        width: 100%!important;
+    }
+    .closebtn {
+        position: absolute;
+        top: 0;
+        right: 12px;
+        font-size: 36px;
+        margin-left: 50px;
+        i:before {
+         content: url('../images/ic_back.svg');    
+        }
+    }
+    .sidemenu-item {
+         font-family: "Dosis";
+         font-style: normal;
+         font-weight: 700;
+         font-size: 18px;
+         line-height: 23px;
+         color: @color-white   ;
+         mix-blend-mode: normal;
+         opacity: .5;
+         padding: 8px 8px 8px 52px;
+         text-decoration: none;
+         display: block;
+         text-transform: uppercase;
+         margin-bottom: 30px;
+    }
+}
